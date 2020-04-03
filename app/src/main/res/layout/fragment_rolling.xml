@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.FragmentRolling">
+
+    <TextView
+        android:id="@+id/fragment_rolling_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="75sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70dp"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_rolling_guideline_h_half"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fragment_rolling_textview_dice_quantity"
+        android:layout_marginBottom="15dp"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_rolling_guideline_h_half"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_rolling_textview_dice_quantity"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_rolling_textview_dice_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/fragment_rolling_button_minus"
+        app:layout_constraintRight_toLeftOf="@id/fragment_rolling_button_plus"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_rolling_guideline_h_half"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_rolling_guideline_h_half"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_guideline_h_half"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fragment_rolling_button_dice_six"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_guideline_h_half"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_rolling_button_dice_four"
+        app:layout_constraintRight_toLeftOf="@+id/fragment_rolling_button_dice_eight"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_guideline_h_half"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_rolling_button_dice_six"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_button_dice_four"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fragment_rolling_button_dice_six"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_twelve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_button_dice_four"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_rolling_button_dice_four"
+        app:layout_constraintRight_toLeftOf="@+id/fragment_rolling_button_dice_eight"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_dice_twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 d"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_rolling_button_dice_four"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_rolling_button_dice_six"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/fragment_rolling_button_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CUSTOM ROLL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
