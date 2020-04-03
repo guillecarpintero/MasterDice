@@ -8,6 +8,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragment.FragmentRolling">
 
+
+
     <TextView
         android:id="@+id/fragment_rolling_number"
         android:layout_width="wrap_content"

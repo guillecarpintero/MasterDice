@@ -81,22 +81,21 @@ public class FragmentRolling extends Fragment {
 
                 if(diceQuantity >= 1){
                     diceQuantity = diceQuantity - 1;
-                    textViewDiceQuantity.setText(diceQuantity.toString());
+                    String s = diceQuantity.toString();
+                    textViewDiceQuantity.setText(s);
                 } else{
 
                     Toast.makeText(getContext(), "Is not possible to have less than 1 dice.", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 diceQuantity = diceQuantity + 1;
-                textViewDiceQuantity.setText(diceQuantity.toString());
-
+                String s = diceQuantity.toString();
+                textViewDiceQuantity.setText(s);
             }
         });
 
@@ -134,7 +133,6 @@ public class FragmentRolling extends Fragment {
                 min = diceTenSides.getMinNumber();
                 max = diceTenSides.getMaxNumber();
                 diceRolling(max,min);
-
             }
         });
 
@@ -153,20 +151,20 @@ public class FragmentRolling extends Fragment {
                 min = diceTwentySides.getMinNumber();
                 max = diceTwentySides.getMaxNumber();
                 diceRolling(max,min);
-
             }
         });
 
         return view;
     }
 
-    public void diceRolling(Integer max, Integer min){
+    private void diceRolling(Integer max, Integer min){
 
         Integer diceQuantity = Integer.valueOf(textViewDiceQuantity.getText().toString());
 
         newRoll = new Random().nextInt((max - min) + 1) + min;
         newRoll = newRoll * diceQuantity;
-        textViewNumber.setText(newRoll.toString());
+        String s = diceQuantity.toString();
+        textViewNumber.setText(s);
 
     }
 }
