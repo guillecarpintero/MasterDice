@@ -2,7 +2,6 @@
 // Date: 04/03/2025
 // Description: MasterDice is a simple dice rolling project. It allows users to roll dice with a customizable number of faces and quantities.
 
-
 //Main dice
 let mainFace = document.getElementById("mainDiceFaces");
 let mainQuantity = document.getElementById("mainDiceQuantity");
@@ -42,8 +41,8 @@ rollButton.addEventListener("click", function() {
     if (mainFace.value === "" || mainQuantity.value === "") {
         alert("Please, fill in the fields");
     } else {
-        let faces = parseInt(mainFace.value); // Convertir a número
-        let quantity = parseInt(mainQuantity.value); // Convertir a número
+        let faces = parseInt(mainFace.value); 
+        let quantity = parseInt(mainQuantity.value); 
         throwDice(faces, quantity);
     }
 });
