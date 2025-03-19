@@ -1,12 +1,12 @@
 // Autor: Guillermo Carpintero
 // Date: 04/03/2025
-// Description: MasterDice is a simple solution for throwing dice. It allows you to throw a dice with a certain number of faces and a certain number of dice. 
-//              It also allows you to create a dice object with a certain number of faces and a certain number of dice.
+// Description: MasterDice is a simple dice rolling project. It allows users to roll dice with a customizable number of faces and quantities.
 
 
 //Main dice
 let mainFace = document.getElementById("mainDiceFaces");
 let mainQuantity = document.getElementById("mainDiceQuantity");
+let result = document.getElementById("diceResult");
 let resetButton = document.getElementById("reset");
 let rollButton = document.getElementById("rollDice");
 
@@ -26,9 +26,8 @@ function throwDice(diceFaces, diceQuantity) {
         diceSum += roll;
     }
 
-    console.log(`You have thrown ${diceQuantity} dice with ${diceFaces} faces each. The result is: ${diceArray}. The sum is: ${diceSum}`);
+    result.innerHTML = `${diceSum} - (${diceArray})`;
 }
-
 
 //Dice constructor
 class Dice {
@@ -55,55 +54,11 @@ resetButton.addEventListener("click", function() {
     mainQuantity.value = "";
 });
 
-//Coin flip Button
+//Coin flip
+let coinFlip = document.getElementById("coinResult");
+let flipButton = document.getElementById("flipCoin");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* //Variables
-let diceFaces = 0;
-let diceQuantity = 0;
-
-//Throw dice method
-function throwDice(diceFaces, diceQuantity) {
-    let diceArray = [];
-    let diceSum = 0;
-
-    for (let i = 0; i < diceQuantity; i++) {
-        diceArray.push(Math.floor(Math.random() * diceFaces) + 1);
-        diceSum += diceArray[i];
-    }
-
-    console.log(`You have thrown ${diceQuantity} dice with ${diceFaces} faces each. The result is: ${diceArray}. The sum is: ${diceSum}`);
-
-}
-
-//Dice constructor
-class Dice {
-    constructor(quantity, face) {
-        this.quantity = quantity;
-        this.face = face;
-        }
-}
-
-
-
-
-// Crear un nuevo objeto Persona
-const sixDice = new Dice (3,6);
-throwDice(diceFaces, diceQuantity); */
+flipButton.addEventListener("click", function() {
+    let coin = Math.floor(Math.random() * 2) + 1;
+    coinFlip.innerHTML = coin === 1 ? "Heads" : "Tails";
+});
